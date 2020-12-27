@@ -53,7 +53,7 @@
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [[self.webView configuration].userContentController  removeScriptMessageHandlerForName:@"clickEncode"];
-    [[self.webView configuration].userContentController addScriptMessageHandler:self name:@"clickDecode"];
+    [[self.webView configuration].userContentController removeScriptMessageHandlerForName:@"clickDecode"];
 }
 
 
